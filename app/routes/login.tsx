@@ -10,6 +10,10 @@ export default function Login() {
   });
   const [action, setAction] = useState("login");
 
+  // export const action = async ()=> {
+    
+  // }
+
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement>,
     field: string
