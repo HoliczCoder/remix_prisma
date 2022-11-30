@@ -1,6 +1,12 @@
 import { Layout } from "~/components/layout";
 import { useState } from "react";
 import { FormField } from "~/components/form-field";
+import { ActionFunction } from "@remix-run/node";
+
+export const action: ActionFunction = async ({ request }) => {
+  const form = await request.formData();
+};
+
 export default function Login() {
   const [formData, setFormData] = useState({
     email: "",
@@ -9,10 +15,6 @@ export default function Login() {
     lastName: "",
   });
   const [action, setAction] = useState("login");
-
-  // export const action = async ()=> {
-    
-  // }
 
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement>,
